@@ -2,9 +2,10 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "agent-bot — Operational system for collaboration",
+  title: "Agent Bot — Delivery State System für Agenturen",
   description:
-    "Agent Bot structures handoffs, ownership and follow-ups so projects run without coordination.",
+    "Übergaben, Ownership und Feedback so strukturieren, dass Projekte ohne Status-Chaos laufen.",
+  metadataBase: new URL("https://agent-bot.de"),
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -13,14 +14,34 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-touch-icon.png",
   },
+  openGraph: {
+    type: "website",
+    url: "https://agent-bot.de",
+    title: "Agent Bot — Delivery State System für Agenturen",
+    description:
+      "Übergaben, Ownership und Feedback so strukturieren, dass Projekte ohne Status-Chaos laufen.",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Agent Bot — Delivery State System",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Agent Bot — Delivery State System für Agenturen",
+    description:
+      "Übergaben, Ownership und Feedback so strukturieren, dass Projekte ohne Status-Chaos laufen.",
+    images: ["/og.png"],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de">
-      <body className="bg-white text-slate-900 antialiased">
-        {children}
-      </body>
+      <body className="bg-white text-slate-900 antialiased">{children}</body>
     </html>
   );
 }
