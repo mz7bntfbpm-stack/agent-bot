@@ -4,34 +4,29 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://agent-bot.de"),
 
-  title: "Agent Bot — Operational system for collaboration",
+  title: "Agent Bot — Delivery State System für Agenturen",
   description:
-    "Agent Bot structures handoffs, ownership and follow-ups so projects run without coordination.",
+    "Eure Projekte hängen nicht an der Kreativität — sie hängen an Übergaben, Feedback und unklarer Ownership. Agent Bot strukturiert Handoffs, Freigaben und Status automatisch.",
 
   openGraph: {
+    type: "website",
+    url: "https://agent-bot.de",
     title: "Agent Bot — Delivery State System",
     description:
-      "Projects don’t stall because of creativity — they stall because of handoffs and unclear ownership.",
-    url: "https://agent-bot.de",
-    siteName: "Agent Bot",
+      "Projekte scheitern nicht an Ideen, sondern an Übergaben und unklarer Verantwortung.",
     images: [
       {
-        url: "/og.png",
+        url: "https://agent-bot.de/og.png",
         width: 1200,
         height: 630,
         alt: "Agent Bot",
       },
     ],
-    locale: "en_US",
-    type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Agent Bot — Delivery State System",
-    description:
-      "Projects don’t stall because of creativity — they stall because of handoffs and unclear ownership.",
-    images: ["/og.png"],
+    images: ["https://agent-bot.de/og.png"],
   },
 
   icons: {
@@ -39,15 +34,3 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
 };
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="de">
-      <body className="bg-white text-slate-900 antialiased">{children}</body>
-    </html>
-  );
-}
