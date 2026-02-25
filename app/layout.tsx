@@ -16,17 +16,20 @@ export const metadata: Metadata = {
       "Projekte scheitern nicht an Ideen, sondern an Übergaben und unklarer Verantwortung.",
     images: [
       {
-        url: "https://agent-bot.de/og.png",
+        url: "https://agent-bot.de/og.jpg",
         width: 1200,
         height: 630,
-        alt: "Agent Bot",
+        alt: "Agent Bot — Delivery State System",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    images: ["https://agent-bot.de/og.png"],
+    title: "Agent Bot — Delivery State System",
+    description:
+      "Projekte scheitern nicht an Ideen, sondern an Übergaben und unklarer Verantwortung.",
+    images: ["https://agent-bot.de/og.jpg"],
   },
 
   icons: {
