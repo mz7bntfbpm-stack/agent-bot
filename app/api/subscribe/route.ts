@@ -11,6 +11,11 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Ungültige E-Mail-Adresse." }, { status: 400 });
     }
 
+    if (!BEEHIIV_API_KEY || !BEEHIIV_PUB_ID) {
+      console.error("Missing env vars: BEEHIIV_API_KEY=", !!BEEHIIV_API_KEY, "BEEHIIV_PUB_ID=", !!BEEHIIV_PUB_ID);
+      return NextResponse.json({ error: "Server-Konfigurationsfehler.", debug: { hasKey: !!BEEHIIV_API_KEY, hasPubId: !!BEEHIIV_PUB_ID } }, { status: 500 });
+    }
+
     const res = await fetch(
       `https://api.beehiiv.com/v2/publications/${BEEHIIV_PUB_ID}/subscriptions`,
       {
@@ -31,8 +36,8 @@ export async function POST(req: NextRequest) {
 
     if (!res.ok) {
       const err = await res.json().catch(() => ({}));
-      console.error("Beehiiv error:", err);
-      return NextResponse.json({ error: "Anmeldung fehlgeschlagen. Bitte versuche es erneut." }, { status: 500 });
+      console.error("Beehiiv error status:", res.status, err);
+      return NextResponse.json({ error: "Anmeldung fehlgeschlagen. Bitte versuche es erneut.", debug: { status: res.status } }, { status: 500 });
     }
 
     return NextResponse.json({ success: true });
