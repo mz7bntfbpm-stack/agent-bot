@@ -3,6 +3,15 @@ import { NextRequest, NextResponse } from "next/server";
 const BEEHIIV_API_KEY = process.env.BEEHIIV_API_KEY!;
 const BEEHIIV_PUB_ID = process.env.BEEHIIV_PUB_ID!;
 
+export async function GET() {
+  return NextResponse.json({
+    hasKey: !!BEEHIIV_API_KEY,
+    keyLength: BEEHIIV_API_KEY?.length ?? 0,
+    hasPubId: !!BEEHIIV_PUB_ID,
+    pubId: BEEHIIV_PUB_ID ?? "not set",
+  });
+}
+
 export async function POST(req: NextRequest) {
   try {
     const { email } = await req.json();
@@ -30,13 +39,14 @@ export async function POST(req: NextRequest) {
     );
 
     if (!res.ok) {
-      console.error("Beehiiv error:", res.status);
-      return NextResponse.json({ error: "Anmeldung fehlgeschlagen. Bitte versuche es erneut." }, { status: 500 });
+      const errBody = await res.json().catch(() => ({}));
+      console.error("Beehiiv error:", res.status, errBody);
+      return NextResponse.json({ error: "Anmeldung fehlgeschlagen.", beehiivStatus: res.status, beehiivError: errBody }, { status: 500 });
     }
 
     return NextResponse.json({ success: true });
   } catch (e) {
     console.error("Subscribe error:", e);
-    return NextResponse.json({ error: "Serverfehler. Bitte versuche es erneut." }, { status: 500 });
+    return NextResponse.json({ error: "Serverfehler." }, { status: 500 });
   }
 }
