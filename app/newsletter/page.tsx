@@ -2,29 +2,73 @@ import type { Metadata } from "next";
 import NewsletterForm from "../components/NewsletterForm";
 
 export const metadata: Metadata = {
-  title: "Agent Bot Weekly – KI-Agenten Newsletter",
+  title: "Agent Bot Weekly ‚Äì KI-Agenten Newsletter",
   description:
     "Der deutschsprachige Newsletter zu KI-Agenten, MCP, LLMs und Automatisierung. Jeden Freitag kostenlos.",
   openGraph: {
     type: "website",
     url: "https://agent-bot.de/newsletter",
-    title: "Agent Bot Weekly – KI-Agenten Newsletter",
+    title: "Agent Bot Weekly ‚Äì KI-Agenten Newsletter",
     description:
-      "Curated News, Deep Dives und echte Use Cases rund um autonome KI-Agenten — jeden Freitag kostenlos.",
+      "Curated News, Deep Dives und echte Use Cases rund um autonome KI-Agenten ‚Äì jeden Freitag kostenlos.",
   },
 };
 
 const issues = [
-  { num: "#024", date: "28. Feb 2025", datetime: "2025-02-28", title: "MCP: Das neue Standard-Protokoll für Agenten?", description: "Anthropics Model Context Protocol gewinnt rasant an Adoptierung — was steckt dahinter und warum ist es wichtig?", tags: ["MCP", "Anthropic", "Protokolle"] },
-  { num: "#023", date: "21. Feb 2025", datetime: "2025-02-21", title: "OpenAI Operator vs. Claude Computer Use", description: "Browser-steuernde Agenten im direkten Vergleich — was kann heute schon produktiv eingesetzt werden?", tags: ["OpenAI", "Claude", "Browser-Agents"] },
-  { num: "#022", date: "14. Feb 2025", datetime: "2025-02-14", title: "LangGraph vs. CrewAI — welches Framework gewinnt?", description: "Ein ehrlicher Vergleich zweier populärer Multi-Agent-Frameworks mit echten Code-Beispielen.", tags: ["LangGraph", "CrewAI", "Frameworks"] },
+  {
+    num: "#024",
+    date: "28. Feb 2025",
+    datetime: "2025-02-28",
+    title: "MCP: Das neue Standard-Protokoll f√ºr Agenten?",
+    description:
+      "Anthropics Model Context Protocol gewinnt rasant an Adoptierung ‚Äì was steckt dahinter und warum ist es wichtig?",
+    tags: ["MCP", "Anthropic", "Protokolle"],
+  },
+  {
+    num: "#023",
+    date: "21. Feb 2025",
+    datetime: "2025-02-21",
+    title: "OpenAI Operator vs. Claude Computer Use",
+    description:
+      "Browser-steuernde Agenten im direkten Vergleich ‚Äì was kann heute schon produktiv eingesetzt werden?",
+    tags: ["OpenAI", "Claude", "Browser-Agents"],
+  },
+  {
+    num: "#022",
+    date: "14. Feb 2025",
+    datetime: "2025-02-14",
+    title: "LangGraph vs. CrewAI ‚Äì welches Framework gewinnt?",
+    description:
+      "Ein ehrlicher Vergleich zweier popul√§rer Multi-Agent-Frameworks mit echten Code-Beispielen.",
+    tags: ["LangGraph", "CrewAI", "Frameworks"],
+  },
 ];
 
 const topics = [
-  { icon: "?", title: "Deep Dives", description: "Technische Analysen zu Frameworks, Protokollen und Architektur-Entscheidungen in der Agenten-Welt." },
-  { icon: "?", title: "News & Updates", description: "Die wichtigsten Releases und Ankündigungen der Woche — gefiltert und eingeordnet." },
-  { icon: "??", title: "Tools & Ressourcen", description: "Praktische Tools, Open-Source-Projekte und Repos, die den Unterschied machen." },
-  { icon: "?", title: "Use Cases", description: "Echte Einsatzszenarien aus der Praxis — was funktioniert, was nicht und warum." },
+  {
+    icon: "üî¨",
+    title: "Deep Dives",
+    description:
+      "Technische Analysen zu Frameworks, Protokollen und Architektur-Entscheidungen in der Agenten-Welt.",
+  },
+  {
+    icon: "üì°",
+    title: "News & Updates",
+    description:
+      "Die wichtigsten Releases und Ank√ºndigungen der Woche ‚Äì gefiltert und eingeordnet.",
+  },
+  {
+    icon: "üß∞",
+    title: "Tools & Ressourcen",
+    description:
+      "Praktische Tools, Open-Source-Projekte und Repos, die den Unterschied machen.",
+  },
+  {
+    icon: "üí°",
+    title: "Use Cases",
+    description:
+      "Echte Einsatzszenarien aus der Praxis ‚Äì was funktioniert, was nicht und warum.",
+  },
 ];
 
 export default function NewsletterPage() {
@@ -32,16 +76,16 @@ export default function NewsletterPage() {
     <div className="min-h-screen bg-[#0a0a0f] text-[#e8e8f0] font-sans">
       <header className="sticky top-0 z-50 border-b border-[#1e1e2e] bg-[#0a0a0f]/90 backdrop-blur-md">
         <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-          <a href="/" className="text-sm font-bold tracking-widest uppercase text-[#e8e8f0] hover:text-[#a78bfa] transition-colors">? Agent Bot</a>
+          <a href="/" className="text-sm font-bold tracking-widest uppercase text-[#e8e8f0] hover:text-[#a78bfa] transition-colors">‚Üê Agent Bot</a>
           <span className="text-sm font-bold">agentbot<span className="text-[#a78bfa]">weekly</span></span>
         </nav>
       </header>
       <section className="relative overflow-hidden px-6 pb-20 pt-24 text-center">
         <div className="pointer-events-none absolute left-1/2 top-0 h-96 w-[600px] -translate-x-1/2 bg-[radial-gradient(ellipse,rgba(167,139,250,0.18)_0%,transparent_70%)] blur-3xl" />
         <div className="relative mx-auto max-w-2xl">
-          <span className="mb-6 inline-block rounded-full border border-[rgba(167,139,250,0.3)] bg-[rgba(167,139,250,0.12)] px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-[#a78bfa]">? Wöchentlich · Kostenlos · Auf Deutsch</span>
-          <h1 className="mb-4 text-4xl font-black leading-tight tracking-tight md:text-6xl">KI-Agenten verstehen. <span className="text-[#a78bfa]">Woche für Woche.</span></h1>
-          <p className="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-[#9ca3af]">Curated News, Deep Dives und echte Use Cases rund um autonome KI-Agenten, MCP, LLM-Infrastruktur und Prompt Engineering — direkt in dein Postfach.</p>
+          <span className="mb-6 inline-block rounded-full border border-[rgba(167,139,250,0.3)] bg-[rgba(167,139,250,0.12)] px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-[#a78bfa]">üì¨ W√∂chentlich ¬∑ Kostenlos ¬∑ Auf Deutsch</span>
+          <h1 className="mb-4 text-4xl font-black leading-tight tracking-tight md:text-6xl">KI-Agenten verstehen. <span className="text-[#a78bfa]">Woche f√ºr Woche.</span></h1>
+          <p className="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-[#9ca3af]">Curated News, Deep Dives und echte Use Cases rund um autonome KI-Agenten, MCP, LLM-Infrastruktur und Prompt Engineering ‚Äì direkt in dein Postfach.</p>
           <div className="mx-auto max-w-md" id="newsletter"><NewsletterForm /></div>
         </div>
       </section>
@@ -72,7 +116,7 @@ export default function NewsletterPage() {
         <div className="mx-auto max-w-md"><h2 className="mb-2 text-3xl font-bold">Bereit loszulegen?</h2><p className="mb-8 text-[#9ca3af]">Trag dich jetzt ein und verpasse keine Ausgabe mehr.</p><NewsletterForm /></div>
       </section>
       <footer className="border-t border-[#1e1e2e] bg-[#0d0d18] px-6 py-8 text-center text-xs text-[#4b5563]">
-        <p className="mb-2">© 2025 Agent Bot Weekly · Hannes Schwede</p>
+        <p className="mb-2">¬© 2025 Agent Bot Weekly ¬∑ Hannes Schwede</p>
         <div className="flex justify-center gap-4"><a href="/impressum" className="hover:text-[#a78bfa] transition-colors">Impressum</a><a href="/datenschutz" className="hover:text-[#a78bfa] transition-colors">Datenschutz</a><a href="/agb" className="hover:text-[#a78bfa] transition-colors">AGB</a></div>
       </footer>
     </div>
