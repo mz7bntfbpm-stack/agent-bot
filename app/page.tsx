@@ -11,13 +11,7 @@ export const metadata: Metadata = {
     title: "macOS Dev, Docker & AI — Ultimate Cheat Sheet",
     description:
       "Terminal-Cheat-Sheet für macOS-Entwickler. Docker, Git, Node, Playwright, LM Studio. Kostenlos als PDF.",
-    images: [
-      {
-        url: "https://agent-bot.de/og.jpg",
-        width: 1200,
-        height: 630,
-      },
-    ],
+    images: [{ url: "https://agent-bot.de/og.jpg", width: 1200, height: 630 }],
   },
 };
 
@@ -60,12 +54,8 @@ export default function CheatSheetPage() {
       <header className="bg-[#182332] text-white">
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-32">
           <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#FF4F15] mb-6">Kostenloses PDF — 9 Seiten</p>
-          <h1 className="text-[48px] md:text-[80px] font-black leading-[0.9] tracking-[-0.03em] mb-6">
-            MACOS DEV,<br />DOCKER & AI<br /><span className="text-[#FF4F15]">CHEAT SHEET.</span>
-          </h1>
-          <p className="max-w-lg text-lg text-white/60 leading-relaxed">
-            14 Sektionen. Jeder Befehl mit deutschem Kommentar. Fertige Aliases und Shell-Funktionen für die .zshrc. Copy-Paste-ready, kein Tutorial-Gelaber.
-          </p>
+          <h1 className="text-[48px] md:text-[80px] font-black leading-[0.9] tracking-[-0.03em] mb-6">MACOS DEV,<br />DOCKER & AI<br /><span className="text-[#FF4F15]">CHEAT SHEET.</span></h1>
+          <p className="max-w-lg text-lg text-white/60 leading-relaxed">14 Sektionen. Jeder Befehl mit deutschem Kommentar. Fertige Aliases und Shell-Funktionen für die .zshrc. Copy-Paste-ready, kein Tutorial-Gelaber.</p>
         </div>
       </header>
       <div className="border-b border-black/10 bg-black/[0.02]">

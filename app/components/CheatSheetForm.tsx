@@ -6,6 +6,7 @@ type State = "idle" | "loading" | "success" | "error";
 
 export default function CheatSheetForm() {
   const [email, setEmail] = useState("");
+  const [consent, setConsent] = useState(false);
   const [state, setState] = useState<State>("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -91,7 +92,7 @@ export default function CheatSheetForm() {
         <button
           type="button"
           onClick={handleSubmit}
-          disabled={state === "loading" || !email}
+          disabled={state === "loading" || !email || !consent}
           className="
             bg-[#FF4F15] px-6 py-3.5 text-sm font-bold text-white uppercase tracking-[0.1em]
             transition-all hover:bg-[#182332]
@@ -113,13 +114,33 @@ export default function CheatSheetForm() {
         </button>
       </div>
 
+      <label className="mt-3 flex items-start gap-2 cursor-pointer">
+        <input
+          type="checkbox"
+          checked={consent}
+          onChange={(e) => setConsent(e.target.checked)}
+          className="mt-0.5 h-4 w-4 shrink-0 accent-[#FF4F15]"
+        />
+        <span className="text-xs text-black/60 leading-relaxed">
+          Ich willige ein, dass mich Hannes Schwede per E-Mail über das Cheat
+          Sheet sowie zugehörige Inhalte und Angebote zu macOS Dev, Docker & AI
+          informiert. Hinweise zur Datenverarbeitung und Widerruf finde ich in
+          der{" "}
+          <a
+            href="/datenschutz"
+            className="text-[#FF4F15] underline hover:no-underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Datenschutzerklärung
+          </a>
+          .
+        </span>
+      </label>
+
       {state === "error" && (
         <p className="mt-2 text-xs text-red-600 font-medium">{errorMsg}</p>
       )}
-
-      <p className="mt-3 text-xs text-black/40">
-        Kein Spam. Kein Tracking. Jederzeit abbestellbar.
-      </p>
     </div>
   );
 }
