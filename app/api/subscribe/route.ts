@@ -5,7 +5,7 @@ const BEEHIIV_PUB_ID = process.env.BEEHIIV_PUB_ID!;
 
 export async function POST(req: NextRequest) {
   try {
-    const { email } = await req.json();
+    const { email, utm_medium } = await req.json();
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: "Ungültige E-Mail-Adresse." }, { status: 400 });
@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
           reactivate_existing: false,
           send_welcome_email: true,
           utm_source: "website",
-          utm_medium: "newsletter_page",
+          utm_medium: utm_medium || "newsletter_page",
         }),
       }
     );
