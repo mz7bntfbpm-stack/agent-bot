@@ -3,35 +3,31 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://agent-bot.de"),
-
-  title: "Agent Bot — Delivery State System für Agenturen",
+  title: "macOS Dev, Docker & AI — Ultimate Cheat Sheet | Agent Bot",
   description:
-    "Eure Projekte hängen nicht an der Kreativität — sie hängen an Übergaben, Feedback und unklarer Ownership. Agent Bot strukturiert Handoffs, Freigaben und Status automatisch.",
-
+    "9 Seiten, 14 Sektionen, null Fluff. Terminal-Befehle für Node/TS, React, Vite, Docker, Git, Playwright und LM Studio. Kostenlos als PDF.",
   openGraph: {
     type: "website",
     url: "https://agent-bot.de",
-    title: "Agent Bot — Delivery State System",
+    title: "macOS Dev, Docker & AI — Ultimate Cheat Sheet",
     description:
-      "Projekte scheitern nicht an Ideen, sondern an Übergaben und unklarer Verantwortung.",
+      "Terminal-Cheat-Sheet für macOS-Entwickler. Docker, Git, Node, Playwright, LM Studio. Kostenlos als PDF.",
     images: [
       {
         url: "https://agent-bot.de/og.jpg",
         width: 1200,
         height: 630,
-        alt: "Agent Bot — Delivery State System",
+        alt: "macOS Dev, Docker & AI — Ultimate Cheat Sheet",
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
-    title: "Agent Bot — Delivery State System",
+    title: "macOS Dev, Docker & AI — Ultimate Cheat Sheet",
     description:
-      "Projekte scheitern nicht an Ideen, sondern an Übergaben und unklarer Verantwortung.",
+      "Terminal-Cheat-Sheet für macOS-Entwickler. Docker, Git, Node, Playwright, LM Studio. Kostenlos als PDF.",
     images: ["https://agent-bot.de/og.jpg"],
   },
-
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
