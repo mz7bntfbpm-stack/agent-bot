@@ -7,6 +7,7 @@ const NAV_LINKS = [
   { href: "#system", label: "System" },
   { href: "#manifest", label: "Manifest" },
   { href: "#delivery-check", label: "Check" },
+  { href: "/cheatsheet", label: "Cheat Sheet" },
 ];
 
 const DELIVERY_ITEMS = [
@@ -186,6 +187,31 @@ export default function ExecutionModelLanding() {
           )}
         </div>
       </Section>
+
+      {/* Cheat Sheet CTA */}
+      <section className="w-full border-t border-black/25 bg-[#182332] text-white">
+        <div className="mx-auto w-full max-w-7xl px-6 py-20 md:py-28">
+          <div className="max-w-2xl">
+            <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#FF4F15] mb-4">
+              Kostenloses PDF
+            </p>
+            <h2 className="text-[40px] md:text-[56px] font-black leading-[0.9] tracking-[-0.03em] mb-6">
+              TERMINAL<br />
+              <span className="text-[#FF4F15]">CHEAT SHEET.</span>
+            </h2>
+            <p className="text-white/50 text-lg mb-8 max-w-md leading-relaxed">
+              9 Seiten. 14 Sektionen. Docker, Git, Node, Playwright, LM Studio.
+              Copy-Paste-ready.
+            </p>
+            <a
+              href="/cheatsheet"
+              className="inline-block bg-[#FF4F15] text-white px-8 py-4 text-sm font-bold uppercase tracking-[0.15em] hover:bg-white hover:text-black transition-colors"
+            >
+              Kostenlos herunterladen →
+            </a>
+          </div>
+        </div>
+      </section>
 
     </div>
   );
