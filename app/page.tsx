@@ -3,14 +3,12 @@ import CheatSheetForm from "./components/CheatSheetForm";
 
 export const metadata: Metadata = {
   title: "macOS Dev, Docker & AI — Ultimate Cheat Sheet | Agent Bot",
-  description:
-    "9 Seiten, 14 Sektionen, null Fluff. Terminal-Befehle für Node/TS, React, Vite, Docker, Git, Playwright und LM Studio. Kostenlos als PDF.",
+  description: "9 Seiten, 14 Sektionen, null Fluff. Terminal-Befehle für Node/TS, React, Vite, Docker, Git, Playwright und LM Studio. Kostenlos als PDF.",
   openGraph: {
     type: "website",
     url: "https://agent-bot.de",
     title: "macOS Dev, Docker & AI — Ultimate Cheat Sheet",
-    description:
-      "Terminal-Cheat-Sheet für macOS-Entwickler. Docker, Git, Node, Playwright, LM Studio. Kostenlos als PDF.",
+    description: "Terminal-Cheat-Sheet für macOS-Entwickler. Docker, Git, Node, Playwright, LM Studio. Kostenlos als PDF.",
     images: [{ url: "https://agent-bot.de/og.jpg", width: 1200, height: 630 }],
   },
 };
@@ -48,7 +46,19 @@ export default function CheatSheetPage() {
             <div className="h-7 w-7 bg-[#FF4F15]" />
             <span className="text-[12px] font-bold tracking-[0.2em] uppercase">Agent Bot</span>
           </a>
-          <a href="#download" className="bg-[#182332] text-white px-4 py-2 text-[11px] font-bold uppercase tracking-[0.15em] hover:bg-[#FF4F15] transition-colors">Zum Download</a>
+          <div className="flex items-center gap-3">
+            <a href="https://www.linkedin.com/in/schwedehannes/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-black/50 hover:text-[#FF4F15] transition-colors">
+              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <div className="flex items-center gap-3">
+            <a href="https://www.linkedin.com/in/schwedehannes/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-black/50 hover:text-[#FF4F15] transition-colors">
+              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a href="#download" className="bg-[#182332] text-white px-4 py-2 text-[11px] font-bold uppercase tracking-[0.15em] hover:bg-[#FF4F15] transition-colors">Zum Download</a>
+          </div>
+          </div>
         </div>
       </nav>
       <header className="bg-[#182332] text-white">
@@ -133,6 +143,7 @@ export default function CheatSheetPage() {
         <div className="flex justify-center gap-4 text-[11px] text-black/30">
           <a href="/impressum" className="hover:text-[#FF4F15] transition-colors">Impressum</a>
           <a href="/datenschutz" className="hover:text-[#FF4F15] transition-colors">Datenschutz</a>
+          <a href="https://www.linkedin.com/in/schwedehannes/" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF4F15] transition-colors">LinkedIn</a>
         </div>
       </footer>
     </div>
